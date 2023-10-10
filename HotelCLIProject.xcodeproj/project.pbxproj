@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5E728A472AC9563D00B51548 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A462AC9563D00B51548 /* main.cpp */; };
+		5E728A4F2AD1BF2500B51548 /* Accounts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A4D2AD1BF2500B51548 /* Accounts.cpp */; };
+		5E728A522AD1CF0800B51548 /* Registration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A502AD1CF0800B51548 /* Registration.cpp */; };
+		5E728A552AD4122900B51548 /* ValidationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A532AD4122900B51548 /* ValidationManager.cpp */; };
+		5E728A5B2AD55D3C00B51548 /* LogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A592AD55D3C00B51548 /* LogIn.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		5E728A432AC9563D00B51548 /* HotelCLIProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HotelCLIProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E728A462AC9563D00B51548 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5E728A4D2AD1BF2500B51548 /* Accounts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Accounts.cpp; sourceTree = "<group>"; };
+		5E728A4E2AD1BF2500B51548 /* Accounts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Accounts.hpp; sourceTree = "<group>"; };
+		5E728A502AD1CF0800B51548 /* Registration.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Registration.cpp; sourceTree = "<group>"; };
+		5E728A512AD1CF0800B51548 /* Registration.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Registration.hpp; sourceTree = "<group>"; };
+		5E728A532AD4122900B51548 /* ValidationManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ValidationManager.cpp; sourceTree = "<group>"; };
+		5E728A542AD4122900B51548 /* ValidationManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ValidationManager.hpp; sourceTree = "<group>"; };
+		5E728A592AD55D3C00B51548 /* LogIn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogIn.cpp; sourceTree = "<group>"; };
+		5E728A5A2AD55D3C00B51548 /* LogIn.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogIn.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				5E728A462AC9563D00B51548 /* main.cpp */,
+				5E728A4D2AD1BF2500B51548 /* Accounts.cpp */,
+				5E728A4E2AD1BF2500B51548 /* Accounts.hpp */,
+				5E728A502AD1CF0800B51548 /* Registration.cpp */,
+				5E728A512AD1CF0800B51548 /* Registration.hpp */,
+				5E728A532AD4122900B51548 /* ValidationManager.cpp */,
+				5E728A542AD4122900B51548 /* ValidationManager.hpp */,
+				5E728A592AD55D3C00B51548 /* LogIn.cpp */,
+				5E728A5A2AD55D3C00B51548 /* LogIn.hpp */,
 			);
 			path = HotelCLIProject;
 			sourceTree = "<group>";
@@ -119,7 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E728A552AD4122900B51548 /* ValidationManager.cpp in Sources */,
+				5E728A5B2AD55D3C00B51548 /* LogIn.cpp in Sources */,
+				5E728A522AD1CF0800B51548 /* Registration.cpp in Sources */,
 				5E728A472AC9563D00B51548 /* main.cpp in Sources */,
+				5E728A4F2AD1BF2500B51548 /* Accounts.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

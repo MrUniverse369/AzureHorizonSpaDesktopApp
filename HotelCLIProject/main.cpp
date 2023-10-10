@@ -1,5 +1,4 @@
 // hotelAssignment.cpp : Defines the entry point for the console application.
-///*purpose of this assinment is to work on my c++*/
 
 #include <iostream>
 #include <vector>
@@ -7,8 +6,12 @@
 #include <string>
 #include <fstream>
 #include <cstdlib>
-#include <cstdlib>
+#include <stdlib.h>
 #include <algorithm>
+#include "Registration.hpp"
+#include "ValidationManager.hpp"
+#include "LogIn.hpp"
+
 
 
 int dog = 100;
@@ -18,9 +21,10 @@ std::vector<std::string>::iterator iter;
 std::ofstream hotelFiles;
 std::ifstream hotelFilesRead;
 
-char userInput;
-void Login();
-void Book();
+int userInput;
+LogIn loginOb;
+Registration Register;
+void LoggedIn();
 void MenueSystem();
 void ViewAllRooms();
 void AddCustomersToRooms(std::string customerName, int roomNumber);
@@ -30,50 +34,59 @@ void FindRoomFromCustomerName();
 void StoreProgramDataToFile();
 void LoadProgamDataFromFile();
 void SortRoomByAlphabet();
-void ExitToMenue();
 void ER();
 int EXIT = 0;
 int counter = 0;
 char filename[50];
-
-
+bool loggedIn  = false;
 
 int main()
 {
+
     std::cout<<"Welcome to Azure HorizonInn \n";
-    std::cout <<"1:Login \n2:View Rooms \n3:Book \n\n";
+    std::cout <<"1:Login \n2:Register \n3:Exit \n\n";
     std::cin>>userInput;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    
     switch (userInput) {
         case 1:
-            Login();
+            if (loginOb.authenticate() == true) {
+                MenueSystem();
+            }
+            else{
+                main();
+            }
             break;
         case 2:
-            ViewAllRooms();
+            Register.CreateUser();
             break;
         case 3:
-            Book();
+            return 0;
             break;
         default:
+            main();
             break;
     }
-
-    MenueSystem();
     return 0;
 }
+
 void MenueSystem() {
     std::string customerName, tempVer;
     int roomNumber;
-
-    std::cout <<"V: View All Rooms\nA: AddCustomersToRooms\nE: DisplayEmptyRooms\nD: DeleteCustomerFromRoom();\nF: FindRoomFromCustomerName\nS: StoreProgramDataToFile\nL: LoadProgamDataFromFile\nO: SortRoomByAlphabet "<< std::endl;
+    system("CLS");
+    std::cout <<"1: View All Rooms\n2: AddCustomersToRooms\n3: DisplayEmptyRooms\n4: DeleteCustomerFromRoom();\n5: FindRoomFromCustomerName\n6: StoreProgramDataToFile\n7: LoadProgamDataFromFile\n8: SortRoomByAlphabet \n9: LogOut"<< std::endl;
+    std::cout<<"UserINputVale1"<<userInput<<std::endl;
     std::cin >> userInput;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    
 
     switch (toupper(userInput))
     {
-    case 'V':
-        std::cout << "this is a llist of who is staying in every room" << std::endl;
+    case 1:
+        std::cout << "this is a list of who is staying in every room" << std::endl;
         ViewAllRooms();
         break;
-    case 'A':
+    case 2:
         std::cout << "You choose Add customer to room"<<std::endl;
         std::cout << "Enter the customer name" << std::endl;
         std::cin >> tempVer;
@@ -82,42 +95,44 @@ void MenueSystem() {
         std::cin >> roomNumber;
         AddCustomersToRooms(customerName , roomNumber-1);
         break;
-    case 'E':
+    case 3:
         std::cout << "display empty rooms"<<std::endl;
         DisplayEmptyRooms();
         break;
-    case 'D':
+    case 4:
         std::cout << "Delete customer from room" << std::endl;
         DeleteCustomerFromRoom();
         break;
-    case 'F':
+    case 5:
         std::cout << "Find room from customer name " << std::endl;
         FindRoomFromCustomerName();
         break;
-    case 'S':
+    case 6:
         std::cout << "Store program DataFile" << std::endl;
         StoreProgramDataToFile();
         break;
-    case 'L':
+    case 7:
         std::cout << "Load Datafile" << std::endl;
         
         
         LoadProgamDataFromFile();
         break;
-    case 'O':
+    case 8:
         std::cout << "sort customer names alphabetially" << std::endl;
         SortRoomByAlphabet();
         break;
+            
+        case 9:
+            std::cout << "LoggedOut" << std::endl;
+            main();
+            break;
 
     default:
+            main();
         break;
     }
 }
-void Book(){
-    }
-void Login(){
-    
-}
+
 void ViewAllRooms() {
     
      counter = 1;
@@ -127,13 +142,13 @@ void ViewAllRooms() {
         std::cout << *conIter<<"                 "<<counter<< std::endl;
 
     }
-    ExitToMenue();
+    MenueSystem();
 }
 void AddCustomersToRooms(std::string customerName, int roomNumber) {
 
     std::cout << "Type in the name of the customer you want to add to the hotel admin" << std::endl;
     hotelRooms[roomNumber] = customerName;
-    ExitToMenue();
+    MenueSystem();
 
 }
 void DisplayEmptyRooms()
@@ -149,7 +164,7 @@ void DisplayEmptyRooms()
         }
 
     }
-    ExitToMenue();
+    MenueSystem();
     
     
 }
@@ -171,7 +186,7 @@ void DeleteCustomerFromRoom()
     {
         std::cout <<*iter<< " Has been removed from the room it is now empty " << "\nhis room number was " << counter + 1 << std::endl;
         hotelRooms.erase(iter);
-        //hotelRooms[counter] = "EMPTY";
+       
     }
     else
     {
@@ -179,7 +194,7 @@ void DeleteCustomerFromRoom()
     }
     
     
-    ExitToMenue();
+    MenueSystem();
 }
 void FindRoomFromCustomerName()
 {
@@ -197,8 +212,8 @@ void FindRoomFromCustomerName()
         std::cout << "The customer is not staying in the hotel" << std::endl;
     }
     
-    
-    ExitToMenue();
+  
+    MenueSystem();
 }
 void StoreProgramDataToFile()
 {
@@ -213,7 +228,7 @@ void StoreProgramDataToFile()
         hotelFiles << *iter<<std::endl;
     }
     hotelFiles.close();
-    ExitToMenue();
+    MenueSystem();
 }
 void LoadProgamDataFromFile()
 {
@@ -242,27 +257,18 @@ void LoadProgamDataFromFile()
         ++i;
     }
     hotelFilesRead.close();
-    ExitToMenue();
+    MenueSystem();
 }
 void SortRoomByAlphabet()
 {
     std::sort(hotelRooms.begin(),hotelRooms.end());
-
-    ExitToMenue();
-
-}
-void ExitToMenue() {
-
-    std::cout << "Enter one to go back to main menue " << std::endl;
-        std::cin >> EXIT;
-    if (EXIT == 1)
-    {
-        MenueSystem();
-    }
+    MenueSystem();
 
 }
 
-class HotelCustomers {
+
+
+/*class HotelCustomers {
 public:
     std::string CustomerName;
     int roomNumber;
@@ -275,6 +281,15 @@ private:
 
 
 
+};*/
+struct HotelCustomers{
+    std::string CustomerName;
+    int roomNumber;
+    void storeVals(std::string customerName, int rmNumber) {
+        std::cout << "please type in customer name followed by room number" << std::endl;
+        std::cin >> customerName;
+        std::cin >> roomNumber;
+    }
+    
 };
-
 
