@@ -12,6 +12,10 @@
 		5E728A522AD1CF0800B51548 /* Registration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A502AD1CF0800B51548 /* Registration.cpp */; };
 		5E728A552AD4122900B51548 /* ValidationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A532AD4122900B51548 /* ValidationManager.cpp */; };
 		5E728A5B2AD55D3C00B51548 /* LogIn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A592AD55D3C00B51548 /* LogIn.cpp */; };
+		5E728A5E2AD7D2BE00B51548 /* MenueSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A5C2AD7D2BE00B51548 /* MenueSystem.cpp */; };
+		5E728A612AD7D90B00B51548 /* Menue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A5F2AD7D90B00B51548 /* Menue.cpp */; };
+		5E728A642AD7D9C300B51548 /* AdminMenue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A622AD7D9C300B51548 /* AdminMenue.cpp */; };
+		5E728A672AD7DE2F00B51548 /* MainMenue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A652AD7DE2F00B51548 /* MainMenue.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +41,14 @@
 		5E728A542AD4122900B51548 /* ValidationManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ValidationManager.hpp; sourceTree = "<group>"; };
 		5E728A592AD55D3C00B51548 /* LogIn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogIn.cpp; sourceTree = "<group>"; };
 		5E728A5A2AD55D3C00B51548 /* LogIn.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogIn.hpp; sourceTree = "<group>"; };
+		5E728A5C2AD7D2BE00B51548 /* MenueSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MenueSystem.cpp; sourceTree = "<group>"; };
+		5E728A5D2AD7D2BE00B51548 /* MenueSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MenueSystem.hpp; sourceTree = "<group>"; };
+		5E728A5F2AD7D90B00B51548 /* Menue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Menue.cpp; sourceTree = "<group>"; };
+		5E728A602AD7D90B00B51548 /* Menue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Menue.hpp; sourceTree = "<group>"; };
+		5E728A622AD7D9C300B51548 /* AdminMenue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AdminMenue.cpp; sourceTree = "<group>"; };
+		5E728A632AD7D9C300B51548 /* AdminMenue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AdminMenue.hpp; sourceTree = "<group>"; };
+		5E728A652AD7DE2F00B51548 /* MainMenue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenue.cpp; sourceTree = "<group>"; };
+		5E728A662AD7DE2F00B51548 /* MainMenue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainMenue.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,14 @@
 				5E728A542AD4122900B51548 /* ValidationManager.hpp */,
 				5E728A592AD55D3C00B51548 /* LogIn.cpp */,
 				5E728A5A2AD55D3C00B51548 /* LogIn.hpp */,
+				5E728A602AD7D90B00B51548 /* Menue.hpp */,
+				5E728A662AD7DE2F00B51548 /* MainMenue.hpp */,
+				5E728A5D2AD7D2BE00B51548 /* MenueSystem.hpp */,
+				5E728A632AD7D9C300B51548 /* AdminMenue.hpp */,
+				5E728A5F2AD7D90B00B51548 /* Menue.cpp */,
+				5E728A5C2AD7D2BE00B51548 /* MenueSystem.cpp */,
+				5E728A652AD7DE2F00B51548 /* MainMenue.cpp */,
+				5E728A622AD7D9C300B51548 /* AdminMenue.cpp */,
 			);
 			path = HotelCLIProject;
 			sourceTree = "<group>";
@@ -141,9 +161,13 @@
 			files = (
 				5E728A552AD4122900B51548 /* ValidationManager.cpp in Sources */,
 				5E728A5B2AD55D3C00B51548 /* LogIn.cpp in Sources */,
+				5E728A642AD7D9C300B51548 /* AdminMenue.cpp in Sources */,
+				5E728A672AD7DE2F00B51548 /* MainMenue.cpp in Sources */,
 				5E728A522AD1CF0800B51548 /* Registration.cpp in Sources */,
 				5E728A472AC9563D00B51548 /* main.cpp in Sources */,
+				5E728A612AD7D90B00B51548 /* Menue.cpp in Sources */,
 				5E728A4F2AD1BF2500B51548 /* Accounts.cpp in Sources */,
+				5E728A5E2AD7D2BE00B51548 /* MenueSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
