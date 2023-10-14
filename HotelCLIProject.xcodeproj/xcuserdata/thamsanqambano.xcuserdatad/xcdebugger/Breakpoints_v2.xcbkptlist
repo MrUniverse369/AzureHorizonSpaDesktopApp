@@ -3,4 +3,69 @@
    uuid = "17B7B20B-7D16-4444-A90D-6888CFF7CEAF"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68AA0352-E13E-4A77-A5E8-599172CE5FFD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HotelCLIProject/LogIn.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "LogIn::authenticate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68AA0352-E13E-4A77-A5E8-599172CE5FFD - 3466dbd818ca0fae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LogIn::authenticate()"
+                  moduleName = "HotelCLIProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thamsanqambano/GitFiles/HotelCLIProject/HotelCLIProject/LogIn.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "68AA0352-E13E-4A77-A5E8-599172CE5FFD - 3466dbd818ca0fae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LogIn::authenticate()"
+                  moduleName = "HotelCLIProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thamsanqambano/GitFiles/HotelCLIProject/HotelCLIProject/LogIn.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "68AA0352-E13E-4A77-A5E8-599172CE5FFD - 3466dbd818ca0fae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LogIn::authenticate()"
+                  moduleName = "HotelCLIProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/thamsanqambano/GitFiles/HotelCLIProject/HotelCLIProject/LogIn.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

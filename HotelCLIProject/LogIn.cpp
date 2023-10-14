@@ -14,7 +14,7 @@ bool LogIn::authenticate(){
     std::cin >> m_username;
     std::cout <<"Type in your Password \n";
     std::cin >> m_password;
-    std::ifstream read(m_username + ".txt");
+    std::ifstream read(m_username +".txt");
     getline(read,m_user);
     getline(read,m_pass);
     read.close();

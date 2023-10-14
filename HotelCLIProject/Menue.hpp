@@ -15,7 +15,7 @@ class Menue {
 private:
 protected:
 public:
-  int virtual Display();
+  int virtual Display() = 0;
   
 };
 #endif /* Menue_hpp */

@@ -10,23 +10,26 @@
 #include <ctype.h>
 #include <regex>
 #include "Registration.hpp"
- 
+#include "Customer.hpp"
+Customer CustomerObj;
 void Registration::CreateUser(){
     
     std::cout<<"Type in userName\n";
-    m_username = ValidationManager::CleanInputRW(m_username);
+    CustomerObj.setuserName(ValidationManager::CleanInputRW());
     std::cout<<"Type in password\n";
-    m_password = ValidationManager::CleanInputRW(m_password);
+    CustomerObj.setaccPass(ValidationManager::CleanInputRW());
     std::cout<<"Type in your first name \n";
-    m_fName = ValidationManager::CleanInputAlpha(m_fName);
+    CustomerObj.setfName(ValidationManager::CleanInputAlpha());
     std::cout<<"Type in your last name \n";
-    m_lName = ValidationManager::CleanInputAlpha(m_lName);
+   CustomerObj.setlName( ValidationManager::CleanInputAlpha());
     std::cout<<"Type in your email address \n";
-    m_email = ValidationManager::CleanInputEmail(m_email);
+   CustomerObj.setEmail(ValidationManager::CleanInputEmail());
    // std::cout<<"Type in your age \n";
   //  std::cin >> m_dateOfBirth;
-    writeToFile.open(m_username + ".txt");
-    writeToFile << m_username<<std::endl<<m_password<<std::endl<<m_fName<<std::endl<<m_lName<<std::endl<<m_email<<std::endl<<m_dateOfBirth;
+    
+   // accContainer.push_back(CustomerObj);
+    writeToFile.open(CustomerObj.m_getUserName() + ".txt");
+    writeToFile << CustomerObj.m_getUserName() <<std::endl<<CustomerObj.m_getaccPass()<<std::endl<<CustomerObj.m_getfName()<<std::endl<< CustomerObj.m_getlName()<<std::endl<<CustomerObj.m_getEmail()<<std::endl;
     writeToFile.close();
    
 };

@@ -13,17 +13,17 @@
 #include <ctype.h>
 #include <regex>
 
-std::string ValidationManager::CleanInputRW(std::string& userInput){
+std::string ValidationManager::CleanInputRW(){
     
-    do { getline(std::cin,userInput);
-        std::cout<<"UserInpiut is:"<<userInput<<std::endl;
-        for (int i = 0; i < userInput.size(); i++) {
-            if (std::isspace(userInput[i])) {
+    do { getline(std::cin,m_userInput);
+        std::cout<<"UserInpiut is:"<<m_userInput<<std::endl;
+        for (int i = 0; i < m_userInput.size(); i++) {
+            if (std::isspace(m_userInput[i])) {
                 std::cout<<"Incorrect Input please make sure your input mathches the convetions required \n";
                 m_isInputInvalid = true;
                 break;
             }
-            else if(userInput.size() - 1){
+            else if(m_userInput.size() - 1){
                 m_isInputInvalid = false;
             }
             
@@ -31,31 +31,31 @@ std::string ValidationManager::CleanInputRW(std::string& userInput){
    
     }while (m_isInputInvalid);
     
-    return userInput;
+    return m_userInput;
     
 };
-std::string ValidationManager::CleanInputAlpha(std::string &userInput){
-    do {getline(std::cin,userInput);
-        for (int i = 0 ; i < userInput.size(); i++) {
-            if (!isalpha(userInput[i])) {
+std::string ValidationManager::CleanInputAlpha(){
+    do {getline(std::cin,m_userInput);
+        for (int i = 0 ; i < m_userInput.size(); i++) {
+            if (!isalpha(m_userInput[i])) {
                 std::cout<<"Incorrect Input please make sure your input mathches the convetions required \n";
                 m_isInputInvalid = true;
                 break;
             }
-            else if(userInput.size() - 1){
+            else if(m_userInput.size() - 1){
                 m_isInputInvalid = false;
             }
             
         }
     } while (m_isInputInvalid);
-    return userInput;
+    return m_userInput;
 };
 
-std::string ValidationManager::CleanInputEmail(std::string& userInput){
+std::string ValidationManager::CleanInputEmail(){
     std::regex regexVal("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
     
-    do {getline(std::cin,userInput);
-        if(std::regex_match(userInput,regexVal)){
+    do {getline(std::cin,m_userInput);
+        if(std::regex_match(m_userInput,regexVal)){
             std::cout<<"Email is Valid \n";
             m_isInputInvalid = false;
         }
@@ -65,7 +65,7 @@ std::string ValidationManager::CleanInputEmail(std::string& userInput){
         }
     } while (m_isInputInvalid);
     
-    return  userInput;
+    return  m_userInput;
 };
 
 void ValidationManager::ClearBuffer(){

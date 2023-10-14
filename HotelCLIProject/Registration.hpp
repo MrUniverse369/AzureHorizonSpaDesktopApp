@@ -9,6 +9,9 @@
 #define Registration_hpp
 
 #include <stdio.h>
+#include "Accounts.hpp"
+#include <vector>
+#include <algorithm>
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -19,11 +22,7 @@ class Registration : ValidationManager
 {
      
 private:
-    std::string m_username;
-    std::string m_password;
-    std::string m_fName;
-    std::string m_lName;
-    std::string m_email;
+    std::vector<Accounts> accContainer;
     bool m_isInputInvalid;
     std::ofstream writeToFile;
     std::ifstream readFile;

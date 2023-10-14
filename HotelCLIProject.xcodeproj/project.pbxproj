@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E208A4E2AD973B300683524 /* Customer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E208A4C2AD973B300683524 /* Customer.cpp */; };
 		5E728A472AC9563D00B51548 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A462AC9563D00B51548 /* main.cpp */; };
 		5E728A4F2AD1BF2500B51548 /* Accounts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A4D2AD1BF2500B51548 /* Accounts.cpp */; };
 		5E728A522AD1CF0800B51548 /* Registration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E728A502AD1CF0800B51548 /* Registration.cpp */; };
@@ -31,6 +32,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5E208A4C2AD973B300683524 /* Customer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Customer.cpp; sourceTree = "<group>"; };
+		5E208A4D2AD973B300683524 /* Customer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Customer.hpp; sourceTree = "<group>"; };
+		5E208A632ADAB32B00683524 /* Users */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Users; sourceTree = "<group>"; };
 		5E728A432AC9563D00B51548 /* HotelCLIProject */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HotelCLIProject; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E728A462AC9563D00B51548 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5E728A4D2AD1BF2500B51548 /* Accounts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Accounts.cpp; sourceTree = "<group>"; };
@@ -65,6 +69,7 @@
 		5E728A3A2AC9563D00B51548 = {
 			isa = PBXGroup;
 			children = (
+				5E208A632ADAB32B00683524 /* Users */,
 				5E728A452AC9563D00B51548 /* HotelCLIProject */,
 				5E728A442AC9563D00B51548 /* Products */,
 			);
@@ -98,6 +103,8 @@
 				5E728A5C2AD7D2BE00B51548 /* MenueSystem.cpp */,
 				5E728A652AD7DE2F00B51548 /* MainMenue.cpp */,
 				5E728A622AD7D9C300B51548 /* AdminMenue.cpp */,
+				5E208A4C2AD973B300683524 /* Customer.cpp */,
+				5E208A4D2AD973B300683524 /* Customer.hpp */,
 			);
 			path = HotelCLIProject;
 			sourceTree = "<group>";
@@ -164,6 +171,7 @@
 				5E728A642AD7D9C300B51548 /* AdminMenue.cpp in Sources */,
 				5E728A672AD7DE2F00B51548 /* MainMenue.cpp in Sources */,
 				5E728A522AD1CF0800B51548 /* Registration.cpp in Sources */,
+				5E208A4E2AD973B300683524 /* Customer.cpp in Sources */,
 				5E728A472AC9563D00B51548 /* main.cpp in Sources */,
 				5E728A612AD7D90B00B51548 /* Menue.cpp in Sources */,
 				5E728A4F2AD1BF2500B51548 /* Accounts.cpp in Sources */,

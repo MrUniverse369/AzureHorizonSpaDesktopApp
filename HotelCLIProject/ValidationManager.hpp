@@ -17,10 +17,11 @@
 class ValidationManager{
 private:
     bool m_isInputInvalid;
+    std::string m_userInput;
 protected:
-    std::string CleanInputRW(std::string& userInput);//returns input with non white spaces
-    std::string CleanInputAlpha(std::string& userInput);//returns input that is alpha only
-    std::string CleanInputEmail(std::string& userInput);//returns input that matches correct email convetions
+    std::string CleanInputRW();//returns input with non white spaces
+    std::string CleanInputAlpha();//returns input that is alpha only
+    std::string CleanInputEmail();//returns input that matches correct email convetions
 public:
     void ClearBuffer();//clean buffer after cin is used
 };
